@@ -1,0 +1,1603 @@
+/* Template style from here */
+
+/* Resel all */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+    font-family: 'Roboto', sans-serif;
+}
+
+#tel:hover, #address:hover, #fax:hover, #email:hover{
+    background-color: green;
+    color: white;
+    border-radius: 2em;
+    padding: 0.2em;
+}
+
+/* Set background image */
+body {
+    background-image: url('../image/background_image.jpeg');
+    background-size: cover;   
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: auto 100%;
+    padding: 2px;
+    margin: 0em 1em;
+    z-index: -3;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    padding: auto;
+    text-align: center;
+    position: relative;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+    }
+    to {
+        transform: rotateY(359deg);
+        transform-style: preserve-3d;
+    }
+    
+}
+
+header img {
+    /* Logo picture size fixed with different window size */
+    width: 21em;
+    height: 20em;
+    border-radius: 50%;
+    border-width: 0.3em;
+    border-color: black;
+    border-style: solid;
+    /* Rotate logo every 16s */
+    animation-name: rotation; 
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+/* Style header title */
+header p {
+    align-self: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 5em;
+    text-shadow: 5px 5px 3px green; 
+}
+
+
+/* Style navigation bar */
+.mobile {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    height: 5em;
+    background-color:antiquewhite;
+    overflow: hidden;
+    display: flex;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    height: fit-content;
+    border: 3px solid pink;
+}
+
+nav a {
+    height: auto;
+    color: black;
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0.02em 0em;
+    padding-top: 0.7em; 
+    border-radius: 6px;   
+    flex: 25%;
+}
+
+/* Change color when hover nav button */
+nav a:hover {
+    background-color: brown;
+    color: white;
+}
+
+.active {
+    background-color: grey;
+    color: white;
+}
+
+/* Style discount panel */
+#discount {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.5em;
+    background-color: red;
+    border-radius: 10px;
+    padding: 0.2em;
+    color: white;
+    font-size: 2em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    /* Make it always appear above others */
+    z-index: 2;
+}
+
+
+main {
+    text-align: center;
+}
+
+/* Style notification */
+#notification h2 {
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+#covid {
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 10px;
+    background-color: aliceblue;
+    color: red;  
+    padding: 0.5em;
+    width: fit-content;
+    height: fit-content;
+    margin: 0.2em;
+}
+
+#covid:hover {
+    background-color: red;
+    color: white
+}
+
+/*Style footer  */
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+}
+
+footer div{
+    width: 50%;
+    margin: 0em;
+    padding: 0.2em;
+    text-align: center;
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.8em;
+}
+
+#footer_obscure_background {
+    position: absolute; 
+    background-color: white; 
+    width: 100%; 
+    height: 100%; 
+    opacity: 0.3; 
+    z-index: -1;
+}
+
+/* Style call to action */
+
+#call_to_action {
+    background-color: pink;
+    margin: 0.5em;
+    border-radius: 50px;
+    border-width: 0.3em;
+    border-color: red;
+    border-style: solid;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+#call_to_action a{
+    text-decoration: none;
+    color: green;
+}
+
+#scroll_top {
+    background-color: grey;
+    opacity: 0.9;
+    width: 1em;
+    height: 1em;
+    font-size: 5em;
+    color: white;
+    position: fixed;
+    z-index: 4;
+    bottom: 0.6em;
+    right: 0.6em;
+    border-radius: 50%;
+    text-align: center;
+    padding-bottom: 1.5em;
+    font-size: 3em;
+}
+
+#copy_right {
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* For mobile */
+@media screen and (max-width: 630px) {
+    /* Style header */
+
+    header img {
+        display: block;
+        width: 15em;
+        height: 15em;
+        margin: 0.5em auto;
+    }
+    header p {
+        font-size: 2.5em;
+    }
+    /* Style navigator */
+
+    .tablet_desktop {
+        display: none;
+    }
+
+    nav.mobile {
+        display: block;
+        width: fit-content;
+        top: 5em;
+        left: 1em;
+        position: fixed;
+        z-index: 3;  /*Make it on top */
+        height: fit-content;
+        border-radius: 15px;
+        padding: 0.2em;
+    }
+    nav.mobile a {
+        display: block;
+        text-align: left;
+        padding: 0.1em;
+        height: fit-content;
+        font-size: 1.5em;
+    }
+
+    .close_button {
+        width: fit-content;
+        margin-left: 85%;
+        color: white;
+        background-color: black;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+
+    }
+
+    #link_list{
+        flex-direction: column;
+        display: none;     
+    }
+
+    #menu_icon {
+        font-size: 1.5em;
+        display: block;    
+    }
+
+    /* Style discount */
+    #discount {
+        font-size: 1.2em;
+    }
+
+    /* Style notification */
+    #notification h2 {
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    #covid {
+        font-size: 1em;       
+    }
+
+    /* Style contact now*/
+    /* Style call to action */
+
+    #call_to_action {
+        font-size: 1em;       
+    }
+
+    footer {
+        display: block;
+        font-size: 0.8em;
+    }
+
+    footer div {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Home page style from now */
+
+main.index {
+    display: flex;
+    flex-direction: column;
+}
+
+main.index #specialty {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Style specialty list */
+#specialty div {
+    width: 20%;
+    margin: 1em;
+    background-color: white;
+    padding: 1.5%;
+    border-radius: 10px;
+    border-width: 0.05m;
+    border-color:cadetblue;  
+    border-style: solid;
+    text-align: center;
+}
+
+#specialty img{
+    width: 100%;
+    height: 15em;
+    border-radius: 10px;
+}
+
+#specialty h2 {
+    margin: 20% 0%;
+    font-size: 1.6em;
+}
+
+#specialty div:hover {
+    background-color: cadetblue;
+    opacity: 0.7;
+}
+
+
+/* Style article part */
+#articles {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.2em 1em;
+    margin: 6em auto;
+}
+
+
+/* Style each article elements */
+#flower_ranking, #flower_guide, #flower_meaning{
+    padding: 0.2em;
+    padding-bottom: 2em;
+    background-color: antiquewhite;
+    margin: 4em 0.2em;
+    border-width: 0.5em;
+    border-top-color: black;
+    border-top-style: solid;
+    border-radius: 0.5em;
+}
+
+#articles h1{
+    padding-bottom: 1em;
+    font-size: 2.5em;
+    padding-top: 1.5em;
+    
+}
+
+/* Style article link */
+#articles a{
+    text-decoration: none;
+    font-family: 'Lobster Two', cursive;
+}
+
+#articles a:hover{
+    color: green;
+}
+
+/* Style flower_guide */
+
+/* Create a slideshow */
+.mySlide1 {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5em auto;
+}
+
+#first_appear_slide {
+    display: flex;
+}
+
+.mySlide1 div {
+    width: 30em;
+    height: fit-content;
+    margin: 0.2em;
+}
+
+.mySlide1 img {
+    width: 60%;
+    height: 15em;
+    border-radius: 10%;
+    border: 0.2em solid red; 
+}
+
+.mySlide1 h5 {
+    font-size: 1.5em;
+}
+
+.button_display_left, .button_display_right {
+    font-size: 3em;
+    background-color: black;  
+    width: 1.5em;
+    height: 1.5em;  
+    margin: 0.2em 0.2em;
+    color: white;
+}
+
+
+
+
+/* flower ranking article style */
+
+#flower_ranking img {
+    width: 80%;
+    height: auto;
+    border-radius: 1.5em;
+    border-style: solid;
+    border-width: 5px;
+}
+
+/* flower meaning article style */
+
+#flower_meaning img {
+    width: 80%;
+    border-radius:20px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+
+
+/* Style customer review list */
+#customer_review {
+    box-sizing: border-box;
+    height: auto;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    text-align: center;
+    padding: 3em;
+    margin: 0.5em 15%;
+}
+
+#customer_review h2{
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+#customer_review img {
+    margin-top: 3em;
+    box-sizing: border-box;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: grey;
+    border-width: 8px;
+}
+
+#customer_review p {
+    box-sizing: border-box;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+/* Style notification */
+#notification { 
+    border-radius: 10px;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* For tablet */
+@media screen and (max-width: 1000px) {
+    #specialty div {
+        width: 33.33%;
+        margin: 1em;
+        background-color: white;
+        padding: 1.5%;
+        border-radius: 10px;
+        border-width: 0.05m;
+        border-color:cadetblue;  
+        border-style: solid;
+        text-align: center;
+    } 
+
+
+}
+
+
+/* For mobile */
+@media screen and (max-width: 630px) {
+        /* Style specialty list */
+    main.index #specialty {
+        display: block;
+        margin-top: 1em;
+    }
+
+    #specialty div {
+        width: 80%;
+        margin: 0.1em;
+        background-color: white;
+        padding: 0.05em;
+        margin: 0.5em auto;
+    }
+
+
+    #specialty img{
+        display: none;
+    }
+
+    #specialty div:hover {
+        width: 90%;
+        height: 4em;
+        padding: auto auto;
+    }
+
+    #specialty h2 {
+        margin: 2% 0%;
+        font-size: 1em;
+        font-style: italic;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    /* Style article part */
+    #articles {
+        margin: 1em auto;
+        padding: 0.2em 0.5em;
+        width: 90%;
+    }
+
+    
+    /* Style each article elements */
+    #flower_ranking, #flower_guide, #flower_meaning{
+        padding: 0.2em;
+        padding-bottom: 2em;
+        background-color: antiquewhite;
+        margin: 1em 0em;
+        border-width: 0.5em;
+        border-top-color: black;
+        border-top-style: solid;
+        border-radius: 0.5em;
+    }
+
+    #articles h1{
+        padding-bottom: 1em;
+        font-size: 1em;   
+    }
+
+    /* Style flower_guide */
+
+    /* Create a slideshow */
+    .mySlide1 {
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0.5em;
+    }
+
+    #first_appear_slide {
+        display: flex;
+    }
+
+    .mySlide1 div {
+        width: 40%;
+        height: fit-content;
+        margin: 0.2em;
+    }
+
+    .mySlide1 img {
+        width: 6em;
+        height: 6em;
+        border-radius: 10%;
+        border: 0.2em solid red; 
+    }
+
+    .mySlide1 h5 {
+        display: none;
+    }
+
+    .button_display_left, .button_display_right {
+        font-size: 1.5em;
+        background-color: black;    
+        margin: 0.2em 0.2em;
+        color: white;
+    }
+
+    /* Style customer review list */
+    #customer_review {
+        height: auto;
+        border-style: solid;
+        border-radius: 20px;
+        border-width: 2px;
+        text-align: center;
+        padding: 0.5em;
+        margin: 0.5em 0.5em;
+    }
+
+    #customer_review h2{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    #customer_review img {
+        margin-top: 1em;
+        box-sizing: border-box;
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: grey;
+        border-width: 8px;
+    }
+
+    #customer_review p {
+        box-sizing: border-box;
+        font-size: 1em;
+        padding: 0.5em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* our product page style from now */
+
+.occasion_header {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 3em;
+}
+
+/* Style package service */
+
+.service {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-style: solid;
+    border-radius: 5em;
+    border-color: pink;
+    border-width: 0.5em;
+    padding: 2em;
+    height: fit-content;
+    width: 50em;
+    margin: 2em auto;
+}
+
+.service div{
+    margin: 5% auto;
+    text-align: center;
+    width: 30%;
+    height: auto;
+    padding: auto;
+    
+}
+
+.service h3{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    height: 2em;
+}
+
+.service img{
+    width: 95%;
+    height: 15em;
+    border-radius: 3em;
+    border-style: solid;
+    border-color: pink;
+}
+
+/* style purchase button */
+.service a{
+    text-decoration: none;
+    color: white;
+}
+
+.purchase_button {
+    padding: 0em;
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    border-radius: 2em;
+    border-style: solid;
+    border-color: white;
+    margin-bottom: 0;
+}
+
+/* change color when mouse hover button */
+.purchase_button:hover{
+    background-color: green;
+}
+
+/* For tablet */
+@media screen and (max-width: 1000px){
+    /* Style package service */
+
+    .service {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        border-style: solid;
+        border-radius: 5em;
+        border-color: pink;
+        border-width: 0.5em;
+        padding: 2em;
+        height: fit-content;
+        width: 95%;
+        margin: 2em auto;
+    }
+
+    .service div{
+        margin: 5% auto;
+        text-align: center;
+        width: 30%;
+        height: auto;
+        padding: auto;
+        
+    }
+
+    .service h3{
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        margin-top: 2em;
+        height: 2em;
+    }
+
+    .service img{
+        width: 95%;
+        height: 15em;
+        border-radius: 3em;
+        border-style: solid;
+        border-color: pink;
+    }
+
+    /* style purchase button */
+    .service a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .purchase_button {
+        padding: 0em;
+        background-color: black;
+        color: white;
+        font-size: 2em;
+        border-radius: 2em;
+        border-style: solid;
+        border-color: white;
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+/* For mobile */
+@media screen and (max-width: 630px) {
+    .occasion_header {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-size: 1.8em;
+    }
+
+    /* Style package service */
+
+    .service {
+        display: block;
+        align-items: center;
+        border-style: solid;
+        border-radius: 5em;
+        border-color: pink;
+        border-width: 0.5em;
+        padding: 2em;
+        height: 30em;
+        width: 99%;
+        margin: 2em auto;
+        overflow-y: scroll;
+    }
+
+    .service div{
+        margin: 5% 0%;
+        text-align: center;
+        width: 90%;
+        height: auto;
+        padding: auto;     
+        margin: 2em auto;   
+    }
+
+    .service h3{
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        margin-top: 2em;
+    }
+
+    .service img{
+        width: 70%;
+        border-radius: 3em;
+        border-style: solid;
+        border-color: pink;
+    }
+
+    /* style purchase button */
+    .service a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .purchase_button {
+        padding: 0.5em;
+        background-color: black;
+        color: white;
+        font-size: 1em;
+        margin: 1em 1em;
+        border-radius: 2em;
+        border-style: solid;
+        border-color: white;
+        
+    }
+
+    /* change color when mouse hover button */
+    .purchase_button:hover{
+        background-color: green;
+    }
+}
+
+
+
+/* purchase page style form now */
+
+.purchase h2 {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    font-size: 3.5em;
+}
+
+#purchase_option {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#purchase_option div {
+    flex: 30%;
+    background-color: pink;
+    border-style: solid;
+    margin: 1.5em;
+    padding: 1.2em;    
+    border-radius: 20px;
+    border-color: red;
+    border-width: 0.5%;
+}
+
+#purchase_option div:hover {
+    background-color: yellow;
+}
+
+#purchase_option div h4 {
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+#purchase_option div p {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 2em 0em;
+}
+
+/* style purchase button */
+.purchase_button_option {
+    padding: 0.5em;
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    border-radius: 2em;
+    border-style: solid;
+    border-color: white;
+}
+
+/* change color when mouse hover button */
+.purchase_button_option:hover{
+    background-color: green;
+}
+
+/*  Style purchase form*/
+#purchase_cover {
+    text-align: center;
+    margin: 3em 0em;
+    padding: 1em;
+    background-color: white;
+    border: 0.1em solid black;
+    border-radius: 1%;
+}
+
+/* Style form position */
+.purchase_form {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 50% 50%;
+    margin: 2em 0em;
+}
+
+#purchase_cover h1 {
+    margin-top: 0.5em;
+    font-size: 5em;
+}
+
+#payment {
+    grid-row: 1/ span 2;
+    grid-column: 2;
+}
+
+/* Style submit button */
+#submit {
+    grid-column: 1/ span 2;
+    margin-top: 2em;
+}
+
+#submit button {
+    font-size: 2em;
+    border-radius: 5%;
+    padding: 0.5em 5em;
+}
+
+/* Position all squares */
+fieldset {
+    margin: 0.3em 3em;
+    padding: 0.5em;
+    border-radius: 5%;
+}
+
+#identity {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#identity div {
+    flex: 50%;
+    text-align: left;
+    padding: 0.5em;
+}
+
+#billing_address {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#billing_address div {
+    flex: 50%;
+    text-align: left;
+    padding: 0.5em;
+}
+
+.accepted_card {
+    margin: 1.5em 0em;
+    font-size: 2em;
+}
+
+#card_info {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3em;
+}
+
+#card_info div{
+    flex: 50%;
+    text-align: left;
+    padding: 0.5em;
+}
+
+/* Text style */
+legend {
+    font-size: 2em;
+}
+
+label {
+    font-size: 1em;
+    display: block;  
+    width: auto;
+}
+
+input {
+    width: 90%;
+    background-color: pink;
+    border: 0.2em solid white;
+    border-radius: 15%;
+    height: auto;
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+
+/* For mobile */
+@media screen and (max-width: 630px) { 
+    .purchase h2 {
+        padding-top: 2em;
+        padding-bottom: 0.5em;
+        font-size: 2em;
+    }
+
+    #purchase_option {
+        display: block;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #purchase_option div {
+        height: 5em;
+        overflow: scroll;
+        background-color: pink;
+        border-style: solid;
+        margin: 1.5em;
+        padding: 1em;    
+        border-radius: 20px;
+        border-color: red;
+        border-width: 0.5%;       
+    }
+
+    #purchase_option div:hover {
+        background-color: yellow;
+        height: fit-content;
+    }
+
+    
+
+    #purchase_option div h4 {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    #purchase_option div p {
+        font-size: 1em;
+        font-weight: bold;
+        margin: 2.5em 0em;
+    }
+
+        /* style purchase button */
+    .purchase_button_option {
+        padding: 0.5em;
+        background-color: black;
+        color: white;
+        font-size: 1em;
+        border-radius: 2em;
+        border-style: solid;
+        border-color: white;
+        width: 70%;
+        margin: auto auto;
+        
+    }
+
+    /* change color when mouse hover button */
+    .purchase_button_option:hover{
+        background-color: green;
+    }
+    
+
+    /*  Style purchase form*/
+    #purchase_cover {
+        text-align: center;
+        margin: 3em 0em;
+        padding: 0.5em;
+        background-color: white;
+        border: 0.1em solid black;
+        border-radius: 1%;
+    }
+
+
+
+    /* Style form position */
+    .purchase_form {
+        display: block;
+        text-align: center;
+        margin: 1em 0em;
+    }
+
+    #purchase_cover h1 {
+        margin-top: 0.5em;
+        font-size: 2.5em;
+    }
+
+    /* Style submit button */
+    #submit {
+        margin-top: 2em;
+    }
+
+    #submit button {
+        font-size: 1.5em;
+        border-radius: 10%;
+        padding: 0.5em 3em;
+    }
+
+    /* Position all squares */
+    fieldset {
+        margin: 0.5em 1em;
+        padding: 0.5em;
+        border-radius: 5%;
+    }
+
+    #identity {
+        display: block;
+        flex-wrap: wrap;
+    }
+
+    #identity div {
+        flex: 50%;
+        text-align: center;
+        padding: 0.5em;
+        font-size: 1em;
+    }
+
+    #billing_address {
+        display: block;
+    }
+
+    #billing_address div {
+        flex: 50%;
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    .accepted_card {
+        margin: 1em 0em;
+        font-size: 2em;
+    }
+
+    #card_info {
+        display: block;
+        padding-top: 1.5em;
+    }
+
+    #card_info div{
+        text-align: center;
+        padding: 0.5em;
+        font-size: 1em;
+
+    }
+
+    /* Text style */
+    legend {
+        font-size: 2em;
+    }
+
+    label {
+        font-size: 1em;
+        display: block;  
+        width: auto;
+    }
+
+    input {
+        width: 90%;
+        background-color: pink;
+        border: 0.2em solid white;
+        border-radius: 15%;
+        height: auto;
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* contact us page style from now */
+
+/* style call to action only contact us page */
+#call_to_action_contactus {
+    padding: 1% 1%;
+    margin: 1em 5em;
+    background-color: white;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 0.5em;
+    border-color: red;
+}
+
+#call_to_action_contactus h3  {
+    font-size: 2.5em;
+    padding-bottom: 1em;
+}
+
+#call_to_action_contactus a {
+    text-decoration: none;
+    color: green;
+    font-size: 2em;
+}
+
+#or_letter {
+    margin: 3% 0%;
+    font-weight: bold;
+    font-size: 3.5em;
+}
+
+#gmap_canvas {
+    height: 25em;
+    width: 35em;
+    border: 0.2em dotted black;
+    margin: 2em auto;
+}
+
+.visit_us {
+    font-size: 2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+/* Style the reading part from here */
+
+.about_us {
+    background-color: brown;
+}
+
+
+#who_we_are {
+    background-image: url("../image/about_us_background.jpg");
+    height: 50em;
+    width: auto;
+    background-size: cover;
+    margin-top: em;
+    padding: 0.1em;
+}
+
+#who_we_are h2 {
+    width: fit-content;
+    margin: auto auto;
+    padding: 1em;
+    opacity: 80%;
+    margin-top: 20%;
+    font-size: 2em;
+    color: white;
+    background-color: grey;
+
+}
+
+#who_we_are h3 {
+    font-size: 5em;
+    width: fit-content;
+    margin: auto auto;
+    opacity: 80%;
+    color: white;
+    background-color: grey;
+}
+
+#introduction_0 {
+    grid-area: introduction_0;
+    padding: 0.5em;
+    color: red;
+    font-size: 3em;
+}
+
+#introduction_1 {
+    grid-area: introduction_1;
+    padding: 2em;
+    font-size: 1.5em;
+    border: 2px dotted blue;
+    margin: 0.5em;
+    color: black;
+}
+
+#introduction_2 {
+    grid-area: introduction_2;
+    padding: 2em;
+    font-size: 1.5em;
+    border: 2px dotted blue;
+    margin: 0.5em;
+}
+
+#introduction_text{
+    background-color: lightcoral;
+    display: grid;
+    grid-template-areas: 
+    'introduction_0 introduction_0'
+    'introduction_1 introduction_2';
+    justify-content: space-between;
+}
+
+#our_team {
+    background-color: rgb(20, 146, 214);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2em;
+}
+
+.team_member {
+    flex: 30%;
+    padding: 1em;
+    margin: 0em 1em;
+    width: 20%;
+    margin-bottom: 1.5em;
+    background-color: rgb(218, 237, 236);
+    font-size: 1.2em;
+}
+
+.team_member img {
+    width: 100%;
+    height: 10em;
+    border: 2px solid black;
+}
+
+.team_member h2 {
+    margin: 1em auto;
+}
+
+
+
+
+
+/* For mobile */
+@media screen and (max-width: 630px) {
+        /* style call to action only contact us page */
+    #call_to_action_contactus {
+        padding: 3%;
+        margin: 2% auto;
+        background-color: white;
+        border-style: solid;
+        border-radius: 20px;
+        border-width: 0.1em;
+        border-color: red;
+        
+    }
+
+    #call_to_action_contactus h3  {
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+    }
+
+    #call_to_action_contactus a {
+        text-decoration: none;
+        color: green;
+        font-size: 1.5em;
+
+    }
+
+    #or_letter {
+        margin: 1% 0%;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    
+    #gmap_canvas {
+        height: 15em;
+        width: 20em;
+        border: 0.2em dotted black;
+        margin: 1em auto;
+        border-radius: 10%;
+    }
+
+    .visit_us {
+        font-size: 1.5em;
+        font-style: italic;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    /* Style the reading part from here */
+
+    .about_us {
+        background-color: white;
+    }
+
+
+    #who_we_are {
+        background-image: url("../image/about_us_background.jpg");
+        width: auto;
+        height: 15em;
+        background-size:cover;
+        margin-top: em;
+        padding: 0.1em;
+    }
+
+    #who_we_are h2 {
+        width: fit-content;
+        margin: auto auto;
+        padding: 1em;
+        opacity: 80%;
+        margin-top: 10%;
+        font-size: 1em;
+        color: white;
+        background-color: grey;
+
+    }
+
+    #who_we_are h3 {
+        font-size: 2em;
+        width: fit-content;
+        margin: auto auto;
+        opacity: 80%;
+        color: white;
+        background-color: grey;
+    }
+
+    #introduction_0 {
+        grid-area: introduction_0;
+        padding: 0.5em;
+        color: red;
+        font-size: 1.5em;
+    }
+
+    #introduction_1 {
+        padding: 2em;
+        font-size: 1em;
+        border: 2px dotted blue;
+        margin: 1em;
+        color: black;
+    }
+
+    #introduction_2 {
+        padding: 2em;
+        font-size: 1em;
+        border: 2px dotted blue;
+        margin: 1em;
+    }
+
+    #introduction_text{
+        background-color: lightcoral;
+        display: block;      
+    }
+
+    
+    #our_team {
+        background-color: rgb(20, 146, 214);
+        padding: 0.5em;
+        display: block;
+    }
+
+    .team_member {
+        padding: 1em;
+        margin: 0em auto;
+        width: 90%;
+        display: block;
+        margin-bottom: 1.5em;
+        background-color: rgb(218, 237, 236);
+        font-size: 1.2em;
+        overflow-y: hidden;
+        height: 15em;
+        transition:height 0.5s;
+    }
+
+    .team_member img {
+        width: 100%;
+        height: 10em;
+        border: 2px solid black;
+    }
+
+    .team_member h2 {
+        margin: 1em auto;
+    }
+
+    .team_member:hover {
+        height: 45em;
+    }
+       
+}
+
+
+/* For tablet */
+@media screen and (max-width: 1000px) {
+    #our_team {
+        background-color: rgb(20, 146, 214);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2em;
+    }
+    
+    .team_member {
+        flex: 40%;
+        width: 40%;
+        height: 15em;
+        overflow-y: hidden;
+        padding: 1em;
+        margin: 0em 1em;
+        margin-bottom: 1.5em;
+        background-color: rgb(218, 237, 236);
+        font-size: 1.2em;
+        transition:height 0.5s;
+    }
+    
+    .team_member img {
+        width: 100%;
+        height: 10em;
+        border: 2px solid black;
+    }
+    
+    .team_member h2 {
+        margin: 1em auto;
+    }
+
+    .team_member:hover {
+        height: 45em;
+    }
+       
+}

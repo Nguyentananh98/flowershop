@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome to Busy Bee Florist</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <nav class="mobile" id="mobile_nav">              
+            <div id="link_list">
+                <a href="#" class="close_button" onclick="close_menu()">&times;</a>
+                <a href="index.html">HOME PAGE</a>
+                <a href="our_product.html">OUR PRODUCT</a>
+                <a href="purchase.html"  class="active">PURCHASE NOW</a>
+                <a href="contact_us.html">CONTACT US</a>
+            </div>
+            <a id="menu_icon" onclick="open_menu()">
+				<div>&#9776; Menu</div>
+			</a>
+
+        </nav>
+
+        <header id="header">            
+            <img src="image/header_logo_image.jpg" alt="logo_image" id="logo">
+            <p>Busy Bee Florist</p>           
+        </header>
+
+        <nav class="tablet_desktop">
+            <a href="index.html">HOME PAGE</a>
+            <a href="our_product.html">OUR PRODUCT</a>
+            <a href="purchase.html" class="active">PURCHASE NOW</a>
+            <a href="contact_us.html">CONTACT US</a>
+        </nav>
+
+        <p id="discount">March Special – 10% off for any web order.</p>
+
+        <main class="purchase">
+           <h2>PURCHASE OPTION</h2>
+           <div id="purchase_option">
+                <div>
+                    <h4>FULL-SERVICE</h4>
+                    <p>&#10004;  CONSULTATION</p>
+                    <p>&#10004;  FREE DELIVERY</p>
+                    <p>&#10004;  SET UP ON STAGE</p>
+                    <p>&#10004;  NEXT PURCHASE DISCOUNT</p>
+                    <p>&#10004;  PERSONALLY TAILORED</p>
+                    <h5 class="purchase_button_option">PURCHASE</h5>
+                </div>
+                <div>
+                    <h4>GOOD-SERVICE</h4>
+                    <p>&#10004;  CONSULTATION</p>
+                    <p>❌  FREE DELIVERY</p>
+                    <p>&#10004;  SET UP ON STAGE</p>
+                    <p>❌  NEXT PURCHASE DISCOUNT</p>
+                    <p>&#10004;  PERSONALLY TAILORED</p>
+                    <h5 class="purchase_button_option">PURCHASE</h5>
+                </div>
+                <div>
+                    <h4>NORMAL-SERVICE</h4>
+                    <p>❌  CONSULTATION</p>
+                    <p>❌  FREE DELIVERY</p>
+                    <p>&#10004;  SET UP ON STAGE</p>
+                    <p>❌  NEXT PURCHASE DISCOUNT</p>
+                    <p>&#10004;  PERSONALLY TAILORED</p>
+                    <h5 class="purchase_button_option">PURCHASE</h5>
+                </div>
+            </div>
+
+            <div id="purchase_cover">
+                <h1>Purchase Plan</h1>
+                <form action="submitted.html" class="purchase_form" name="purchase_form" onsubmit="return validateForm()">
+                    <fieldset id="identity">
+                        <legend>Identity</legend>
+                        <div>
+                            <label for="first_name">First Name</label>
+                            <input type="text" name="first_name" required>
+                        </div>
+                        <div>
+                            <label for="last_name">Last Name</label>
+                            <input type="text" name="last_name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email Address</label>
+                            <input type="text" name="email" required>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset id="billing_address">
+                        <legend>Billing Address</legend>
+                        <div>
+                            <label for="street">Street</label>
+                            <input type="text" name="street" required>
+                        </div>
+                        <div>
+                            <label for="city">City</label>
+                            <input type="text" name="city" required>
+                        </div>
+                        <div>
+                            <label for="country">Country</label>
+                            <input type="text" name="country">
+                        </div>
+                        <div>
+                            <label for="zip">Zip</label>
+                            <input type="text" name="zip"required>
+                        </div>
+                        
+                    </fieldset>
+                    <fieldset id="payment">
+                        <legend>Payment</legend>
+
+                        <div class="accepted_card">
+                            <label>Accepted Cards</label>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                        </div>
+
+                        <div id="card_info">
+                            <div>
+                                <label for="card_name">Card Holder Name</label>
+                                <input type="text" name="card_name" required>
+                            </div>
+                            <div>
+                                <label for="card_number">Credit Card Number</label>
+                                <input type="text" name="card_number" required>
+                            </div>
+                            <div>
+                                <label for="card_expr">Card Expiration</label>
+                                <input type="text" name="card_expr" required>
+                            </div>
+                            <div>
+                                <label for="cvc">Security Code</label>
+                                <input type="text" name="cvc" required>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <div id="submit"><button type="submit" name="submit" value="Submit">Submit</button></div>
+                
+                </form>
+            </div>
+        </main>
+        
+        <div id="notification">
+            <h2>NOTICE</h2>            
+            <p id="covid">In response to COVID 19, we do not have readymade flowers available for general walk-in 
+                       trade. Please call or use our website for make to order.</p>            
+        </div>
+        <div id="call_to_action">
+            <h3>CONTACT NOW</h3>           
+                <p>
+                    <a href="tel:+0747791243 " id="tel">Phone: +07 4779 1243</a> <br>
+                    or <a href="mailto:busybeeflorist@busybeemail.com.au" id="email">Email: busybeeflorist@busybeemail.com.au</a>
+                </p>
+        </div>
+
+
+   
+        <footer>   
+            <div id="footer_obscure_background"></div>                   
+            <div>
+                <p id="fax">Fax: 07 4779 1244 </p>
+                <p id="address">Address: 223 Bolsover St in Cairville, Queensland </p>
+            </div>
+               
+            <div>
+                <h3>Trading hours</h3>
+                <p>Mon–Fri : 9.00 am to 4.00 pm</p>
+                <p>Saturday–Sunday : 9.00 am to 12.00 pm</p>
+            </div>       
+            
+        </footer>
+        <a href="#header" id="scroll_top">&#x21E7;</a>
+        <p id="copy_right">	&#169; Copy right. All rights reserved</p>  
+    </body>
+</html>
